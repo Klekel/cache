@@ -1,0 +1,63 @@
+
+/// LRU
+
+{signal: [
+  {name: 'clk', wave: 'p........|.'},
+  {name: 'set_num_i', wave: 'x.3.74.5|..', data: ['2', '2', '3', '7', 'data']},
+  {name: 'en_i', wave: '0.101010|..'},
+  {name: 'vec_i', wave: 'x..3.7.4|x.', data: ['A', 'B', 'C', 'data']},
+  {},
+  {name: 'block_o', wave: 'x.3.74.5|x.', data: ['0', '1', '0', '0']},
+  {},
+  {name: 'we_o', wave: '0.101010|..'},
+  {name: 'addr_o', wave: 'x.3.74.5|..', data: ['2', '2', '3', '7', '']},
+  {name: 'vec_o', wave: 'x..3.7.4|x', data: ['A', 'B', 'C', 'data']},
+]}
+
+
+
+
+
+
+/// cache
+
+{signal: [
+  {name: 'clk_i',               wave: 'p......|...'},
+  {name: 'rstn_i',              wave: 'p......|...'},
+  {},
+  ['cache',
+  {name: 'stall_i',             wave: '0......|...'},
+  {name: 'valid_m_i',           wave: '0.101010|..'},
+  {name: 'valid_s_i',           wave: '0......|...'},
+  {name: 'addr_i',              wave: 'x.3.74.x|..', data: ['2', '2', '3', '7']},
+  {name: 'data_i',              wave: 'x.3.74.x|..', data: ['data1', 'data2', 'data3', 'data']},
+  {},
+  {name: 'hit_o',               wave: 'p......|...'},
+  {name: 'dirty_o',             wave: 'p......|...'},
+  {name: 'data_o',              wave: 'x.3.45x|=.x', data: ['2', 'body', 'tail', 'data']},
+  {name: 'addr_o',              wave: 'x.3.45x|=.x', data: ['2', 'body', 'tail', 'data']},
+  {},
+  {name: 'tech_data_addr_o',    wave: 'x.3.45x|=.x', data: ['2', 'body', 'tail', 'data']},
+  {name: 'tech_data_en_o',      wave: 'p......|...'},
+  {name: 'tech_data_we_o',      wave: 'p......|...'},
+  {},
+  {name: 'tech_matrix_vec_i',   wave: 'x.3.45x|=.x', data: ['2', 'body', 'tail', 'data']},
+  {name: 'tech_matrix_addr_o',  wave: 'x.3.45x|=.x', data: ['2', 'body', 'tail', 'data']},
+  {name: 'tech_matrix_en_o',    wave: 'p......|...'},
+  {name: 'tech_matrix_we_o',    wave: 'p......|...'},
+
+
+  ],
+  {},
+  ['LRU',
+  {name: 'set_num_i', wave: 'x.3.74.5|..', data: ['2', '2', '3', '7', 'data']},
+  {name: 'en_i', wave: '0.101010|..'},
+  {name: 'vec_i', wave: 'x..3.7.4|x.', data: ['A', 'B', 'C', 'data']},
+  {},
+  {name: 'block_o', wave: 'x.3.74.5|x.', data: ['0', '1', '0', '0']},
+  {},
+  {name: 'we_o', wave: '0.101010|..'},
+  {name: 'addr_o', wave: 'x.3.74.5|..', data: ['2', '2', '3', '7', '']},
+  {name: 'vec_o', wave: 'x..3.7.4|x', data: ['A', 'B', 'C', 'data']},
+  ]
+]}
