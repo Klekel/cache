@@ -320,6 +320,6 @@ import cache_struct_pkg::*;
   assign matrix_addr_o        = matrix_addr;
   assign write_vec_o          = write_vec;
   assign updated_matrix_vec_o = updated_matrix_vec;
-  assign cache2mem_ready_o    = !dirty_blockage && load && (state == WAIT || next_state == WAIT);
+  assign cache2mem_ready_o    = !dirty_blockage && load && (state == WAIT);
 
 endmodule
